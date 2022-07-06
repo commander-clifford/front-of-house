@@ -1,5 +1,6 @@
 {
   "name": "front-of-house-project",
+  "homepage": "https://front-of-house.clifford.codes",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
