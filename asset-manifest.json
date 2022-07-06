@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/front-of-house.clifford.codes/static/css/main.073c9b0a.css",
-    "main.js": "/front-of-house.clifford.codes/static/js/main.679fbddd.js",
-    "static/js/787.8803e3c8.chunk.js": "/front-of-house.clifford.codes/static/js/787.8803e3c8.chunk.js",
+    "main.js": "/front-of-house.clifford.codes/static/js/main.9d4efa52.js",
+    "static/js/787.9f1122cd.chunk.js": "/front-of-house.clifford.codes/static/js/787.9f1122cd.chunk.js",
     "index.html": "/front-of-house.clifford.codes/index.html",
     "main.073c9b0a.css.map": "/front-of-house.clifford.codes/static/css/main.073c9b0a.css.map",
-    "main.679fbddd.js.map": "/front-of-house.clifford.codes/static/js/main.679fbddd.js.map",
-    "787.8803e3c8.chunk.js.map": "/front-of-house.clifford.codes/static/js/787.8803e3c8.chunk.js.map"
+    "main.9d4efa52.js.map": "/front-of-house.clifford.codes/static/js/main.9d4efa52.js.map",
+    "787.9f1122cd.chunk.js.map": "/front-of-house.clifford.codes/static/js/787.9f1122cd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.679fbddd.js"
+    "static/js/main.9d4efa52.js"
   ]
 }
