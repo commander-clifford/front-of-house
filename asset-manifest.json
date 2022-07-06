@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/front-of-house.clifford.codes/static/css/main.073c9b0a.css",
-    "main.js": "/front-of-house.clifford.codes/static/js/main.12f7295a.js",
+    "main.js": "/front-of-house.clifford.codes/static/js/main.679fbddd.js",
     "static/js/787.8803e3c8.chunk.js": "/front-of-house.clifford.codes/static/js/787.8803e3c8.chunk.js",
     "index.html": "/front-of-house.clifford.codes/index.html",
     "main.073c9b0a.css.map": "/front-of-house.clifford.codes/static/css/main.073c9b0a.css.map",
-    "main.12f7295a.js.map": "/front-of-house.clifford.codes/static/js/main.12f7295a.js.map",
+    "main.679fbddd.js.map": "/front-of-house.clifford.codes/static/js/main.679fbddd.js.map",
     "787.8803e3c8.chunk.js.map": "/front-of-house.clifford.codes/static/js/787.8803e3c8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.12f7295a.js"
+    "static/js/main.679fbddd.js"
   ]
 }
