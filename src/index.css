@@ -1,3 +1,206 @@
+:root {
+
+  /* Timings */
+
+  --wmd-transition-long: 800ms;
+  --wmd-transition-meduim: 400ms;
+  --wmd-transition-short: 200ms;
+
+  /* Color Assignments */
+
+
+
+
+  /* Light Mode */
+  --foh-foreground-color: var(--wmd-clr-white);
+
+    /* Dark Mode */
+    --foh-foreground-color: var(--wmd-clr-white);
+
+
+
+
+  --wmd-clr-black: var(--wmd-clr-grey-11);
+  --wmd-clr-dark-grey: var(--wmd-clr-grey-810);
+  --wmd-clr-grey: var(--wmd-clr-grey-4);
+  --wmd-clr-white: var(--wmd-clr-grey-0);
+  --wmd-clr-regal: var(--wmd-clr-regal-9);
+  --wmd-clr-plum: var(--wmd-clr-plum-9);
+  --wmd-clr-violet: var(--wmd-clr-violet-8);
+  --wmd-clr-light-violet: var(--wmd-clr-light-violet-6);
+  --wmd-clr-magenta: var(--wmd-clr-magenta-5);
+  --wmd-clr-rose: var(--wmd-clr-rose-8);
+
+  /* Color Definitions */ 
+  
+  /* Shades */
+  --wmd-clr-black-t10: hsla(210, 11%, 5%, 0.1);
+  --wmd-clr-black-t20: hsla(210, 11%, 5%, 0.2);
+  --wmd-clr-black-t40: hsla(210, 11%, 5%, 0.4);
+  --wmd-clr-black-t50: hsla(210, 11%, 5%, 0.5);
+  --wmd-clr-black-t60: hsla(210, 11%, 5%, 0.6);
+  --wmd-clr-black-t70: hsla(210, 11%, 5%, 0.7);
+  --wmd-clr-black-t80: hsla(210, 11%, 5%, 0.8);
+  --wmd-clr-black-t90: hsla(210, 11%, 5%, 0.9);
+
+  --wmd-clr-grey-0: hsl(210, 17%, 98%);
+  --wmd-clr-grey-1: hsl(210, 17%, 95%);
+  --wmd-clr-grey-2: hsl(210, 16%, 93%);
+  --wmd-clr-grey-3: hsl(210, 14%, 89%);
+  --wmd-clr-grey-4: hsl(210, 14%, 83%);
+  --wmd-clr-grey-5: hsl(210, 11%, 71%);
+  --wmd-clr-grey-6: hsl(210, 7%, 56%);
+  --wmd-clr-grey-7: hsl(210, 9%, 31%);
+  --wmd-clr-grey-8: hsl(210, 10%, 23%);
+  --wmd-clr-grey-9: hsl(210, 11%, 15%);
+  --wmd-clr-grey-10: hsl(210, 11%, 5%);
+  --wmd-clr-grey-11: hsl(0, 0%, 0%);
+
+  --wmd-clr-white-t10: hsla(210, 17%, 98%, 0.1);
+  --wmd-clr-white-t20: hsla(210, 17%, 98%, 0.2);
+  --wmd-clr-white-t30: hsla(210, 17%, 98%, 0.3);
+  --wmd-clr-white-t40: hsla(210, 17%, 98%, 0.4);
+  --wmd-clr-white-t50: hsla(210, 17%, 98%, 0.5);
+  --wmd-clr-white-t60: hsla(210, 17%, 98%, 0.6);
+  --wmd-clr-white-t70: hsla(210, 17%, 98%, 0.7);
+  --wmd-clr-white-t80: hsla(210, 17%, 98%, 0.8);
+  --wmd-clr-white-t90: hsla(210, 17%, 98%, 0.9);
+
+  /* Plum */
+  --wmd-clr-plum-1: hsl(286, 93%, 96%);
+  --wmd-clr-plum-2: hsl(286, 93%, 86%);
+  --wmd-clr-plum-3: hsl(286, 93%, 76%);
+  --wmd-clr-plum-4: hsl(286, 93%, 66%);
+  --wmd-clr-plum-5: hsl(286, 93%, 56%);
+  --wmd-clr-plum-6: hsl(286, 93%, 46%);
+  --wmd-clr-plum-7: hsl(286, 93%, 36%);
+  --wmd-clr-plum-8: hsl(286, 93%, 26%);
+  --wmd-clr-plum-9: hsl(286, 93%, 16%); /* base */
+
+  --wmd-clr-plum-t10: hsla(286, 93%, 16%, 0.1);
+  --wmd-clr-plum-t20: hsla(286, 93%, 16%, 0.2);
+  --wmd-clr-plum-t30: hsla(286, 93%, 16%, 0.3);
+  --wmd-clr-plum-t40: hsla(286, 93%, 16%, 0.4);
+  --wmd-clr-plum-t50: hsla(286, 93%, 16%, 0.5);
+  --wmd-clr-plum-t60: hsla(286, 93%, 16%, 0.6);
+  --wmd-clr-plum-t70: hsla(286, 93%, 16%, 0.7);
+  --wmd-clr-plum-t80: hsla(286, 93%, 16%, 0.8);
+  --wmd-clr-plum-t90: hsla(286, 93%, 16%, 0.9);
+
+  /* Violet */
+  --wmd-clr-violet-1: hsl(267, 74%, 93%);
+  --wmd-clr-violet-2: hsl(267, 74%, 83%);
+  --wmd-clr-violet-3: hsl(267, 74%, 73%);
+  --wmd-clr-violet-4: hsl(267, 74%, 63%);
+  --wmd-clr-violet-5: hsl(267, 74%, 53%);
+  --wmd-clr-violet-6: hsl(267, 74%, 43%);
+  --wmd-clr-violet-7: hsl(267, 74%, 33%);
+  --wmd-clr-violet-8: hsl(267, 74%, 23%); /* base */
+  --wmd-clr-violet-9: hsl(267, 74%, 13%);
+  
+  --wmd-clr-violet-t10: hsla(267, 74%, 23%, 0.1);
+  --wmd-clr-violet-t20: hsla(267, 74%, 23%, 0.2);
+  --wmd-clr-violet-t30: hsla(267, 74%, 23%, 0.3);
+  --wmd-clr-violet-t40: hsla(267, 74%, 23%, 0.4);
+  --wmd-clr-violet-t50: hsla(267, 74%, 23%, 0.5);
+  --wmd-clr-violet-t60: hsla(267, 74%, 23%, 0.6);
+  --wmd-clr-violet-t70: hsla(267, 74%, 23%, 0.7);
+  --wmd-clr-violet-t80: hsla(267, 74%, 23%, 0.8);
+  --wmd-clr-violet-t90: hsla(267, 74%, 23%, 0.9);
+
+  /* Regal */
+  --wmd-clr-regal-1: hsl(277, 86%, 94%);
+  --wmd-clr-regal-2: hsl(277, 86%, 84%);
+  --wmd-clr-regal-3: hsl(277, 86%, 74%);
+  --wmd-clr-regal-4: hsl(277, 86%, 64%);
+  --wmd-clr-regal-5: hsl(277, 86%, 54%);
+  --wmd-clr-regal-6: hsl(277, 86%, 44%);
+  --wmd-clr-regal-7: hsl(277, 86%, 34%);
+  --wmd-clr-regal-8: hsl(277, 86%, 24%);
+  --wmd-clr-regal-9: hsl(277, 86%, 14%); /* base */
+
+  --wmd-clr-regal-t10: hsla(277, 86%, 14%, 0.1);
+  --wmd-clr-regal-t20: hsla(277, 86%, 14%, 0.2);
+  --wmd-clr-regal-t30: hsla(277, 86%, 14%, 0.3);
+  --wmd-clr-regal-t40: hsla(277, 86%, 14%, 0.4);
+  --wmd-clr-regal-t50: hsla(277, 86%, 14%, 0.5);
+  --wmd-clr-regal-t60: hsla(277, 86%, 14%, 0.6);
+  --wmd-clr-regal-t70: hsla(277, 86%, 14%, 0.7);
+  --wmd-clr-regal-t80: hsla(277, 86%, 14%, 0.8);
+  --wmd-clr-regal-t90: hsla(277, 86%, 14%, 0.9);
+
+  /* Light Violet */
+  --wmd-clr-light-violet-1: hsl(265, 79%, 91%);
+  --wmd-clr-light-violet-2: hsl(265, 79%, 81%);
+  --wmd-clr-light-violet-3: hsl(265, 79%, 71%);
+  --wmd-clr-light-violet-4: hsl(265, 79%, 61%);
+  --wmd-clr-light-violet-5: hsl(265, 79%, 51%);
+  --wmd-clr-light-violet-6: hsl(265, 79%, 41%); /* base */
+  --wmd-clr-light-violet-7: hsl(265, 79%, 31%);
+  --wmd-clr-light-violet-8: hsl(265, 79%, 21%);
+  --wmd-clr-light-violet-9: hsl(265, 79%, 11%);
+  
+  --wmd-clr-light-violet-t10: hsla(265, 79%, 41%, 0.1);
+  --wmd-clr-light-violet-t20: hsla(265, 79%, 41%, 0.2);
+  --wmd-clr-light-violet-t30: hsla(265, 79%, 41%, 0.3);
+  --wmd-clr-light-violet-t40: hsla(265, 79%, 41%, 0.4);
+  --wmd-clr-light-violet-t50: hsla(265, 79%, 41%, 0.5);
+  --wmd-clr-light-violet-t60: hsla(265, 79%, 41%, 0.6);
+  --wmd-clr-light-violet-t70: hsla(265, 79%, 41%, 0.7);
+  --wmd-clr-light-violet-t80: hsla(265, 79%, 41%, 0.8);
+  --wmd-clr-light-violet-t90: hsla(265, 79%, 41%, 0.9);
+
+  /* Magenta */
+  --wmd-clr-magenta-1: hsl(285, 94%, 90%);
+  --wmd-clr-magenta-2: hsl(285, 94%, 80%);
+  --wmd-clr-magenta-3: hsl(285, 94%, 70%);
+  --wmd-clr-magenta-4: hsl(285, 94%, 60%);
+  --wmd-clr-magenta-5: hsl(285, 94%, 50%); /* base */
+  --wmd-clr-magenta-6: hsl(285, 94%, 40%);
+  --wmd-clr-magenta-7: hsl(285, 94%, 30%);
+  --wmd-clr-magenta-8: hsl(285, 94%, 20%);
+  --wmd-clr-magenta-9: hsl(285, 94%, 10%);
+
+  --wmd-clr-magenta-t10: hsla(285, 94%, 50%, 0.1);
+  --wmd-clr-magenta-t20: hsla(285, 94%, 50%, 0.2);
+  --wmd-clr-magenta-t30: hsla(285, 94%, 50%, 0.3);
+  --wmd-clr-magenta-t40: hsla(285, 94%, 50%, 0.4);
+  --wmd-clr-magenta-t50: hsla(285, 94%, 50%, 0.5);
+  --wmd-clr-magenta-t60: hsla(285, 94%, 50%, 0.6);
+  --wmd-clr-magenta-t70: hsla(285, 94%, 50%, 0.7);
+  --wmd-clr-magenta-t80: hsla(285, 94%, 50%, 0.8);
+  --wmd-clr-magenta-t90: hsla(285, 94%, 50%, 0.9);
+
+  /* Rose */
+  --wmd-clr-rose-1: hsl(297, 86%, 95%);
+  --wmd-clr-rose-2: hsl(297, 86%, 85%);
+  --wmd-clr-rose-3: hsl(297, 86%, 75%);
+  --wmd-clr-rose-4: hsl(297, 86%, 65%);
+  --wmd-clr-rose-5: hsl(297, 86%, 55%);
+  --wmd-clr-rose-6: hsl(297, 86%, 45%);
+  --wmd-clr-rose-7: hsl(297, 86%, 35%);
+  --wmd-clr-rose-8: hsl(297, 86%, 25%); /* base */
+  --wmd-clr-rose-9: hsl(297, 86%, 15%);
+
+  --wmd-clr-rose-t10: hsla(297, 86%, 25%, 0.1);
+  --wmd-clr-rose-t20: hsla(297, 86%, 25%, 0.2);
+  --wmd-clr-rose-t30: hsla(297, 86%, 25%, 0.3);
+  --wmd-clr-rose-t40: hsla(297, 86%, 25%, 0.4);
+  --wmd-clr-rose-t50: hsla(297, 86%, 25%, 0.5);
+  --wmd-clr-rose-t60: hsla(297, 86%, 25%, 0.6);
+  --wmd-clr-rose-t70: hsla(297, 86%, 25%, 0.7);
+  --wmd-clr-rose-t80: hsla(297, 86%, 25%, 0.8);
+  --wmd-clr-rose-t90: hsla(297, 86%, 25%, 0.9);
+
+}
+
+
+
+
+
+
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

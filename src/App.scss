@@ -1,0 +1,153 @@
+body {
+  background-attachment: fixed;
+  background-color: var(--wmd-clr-violet-9);
+  background-image:
+        radial-gradient(82% 45% at 17% 50%, var(--wmd-clr-light-violet-7) 0%, var(--wmd-clr-light-violet-7) 20%, transparent 100%),
+        radial-gradient(58% 40% at 92% 59%, var(--wmd-clr-rose-8) 0%, var(--wmd-clr-rose-8) 20%, transparent 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--foh-foreground-color);
+}
+
+p {
+  line-height: 1.6;
+}
+ul li {
+  text-align: left;
+  margin-bottom: 0.75em;
+  line-height: 1.4;
+  font-size: 0.9em;
+  padding-right: 1em;
+}
+
+article.center {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // min-height: #{"min(100vh, 900px)"};
+  min-height: 100vh;
+}
+
+.breadcrumb {
+  // position: absolute;
+  // top: 0;
+  padding: 1em;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: var(--wmd-clr-white-t40);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
+  padding: 2em;
+  border-radius: 0.5em;
+  background-color: var(--wmd-clr-white-t10);
+  color:  var(--wmd-clr-white);
+
+  max-width: 42ch;
+
+  &--wide {
+    max-width: 62ch;
+  }
+
+  &--sub {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+  }
+
+  &--intro {
+    max-width: 30ch;
+    text-align: center;
+
+    p {
+      padding-inline: 2em;
+    }
+
+  
+  }
+
+  &__content {
+    margin-bottom: 1em;
+
+    h1 {
+      margin-block: 0.5em 1em;
+      font-size: 2em;
+    }
+
+  }
+  &__actions {
+    margin-top: 1em;
+  }
+
+
+
+  button.MuiButton-contained {
+    background-color: var(--wmd-clr-plum-5);
+    // min-width: #{"min(42ch, 40vmin)"};
+    // max-width: 62ch;
+    width: 100%;
+    margin-inline: auto;
+
+    &:hover, &:focus {
+      background-color: var(--wmd-clr-plum-7);
+    }
+  }
+}
+
+
+
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  .MuiButton-root {
+    margin-block: 0.5em;
+  }
+
+
+  .input {
+    // min-width: 42ch;
+    width: 42ch;
+    max-width: #{"min(42ch, 90vw)"};
+    margin-block: 0.5em;
+
+    label {
+      padding-inline: 8px;
+      border-radius: 4px;
+      background:white;
+      
+      &.Mui-focused {
+        margin-left: -4px;
+        color: var(--wmd-clr-plum-5);
+
+        // MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline
+
+        
+      }
+    }
+
+    .Mui-focused fieldset {
+      border-color: var(--wmd-clr-plum-5);
+    }
+
+    .MuiInputBase-root {
+      background:white;
+    }
+  }
+}
+
+.align-left {
+  text-align: left;
+}
+.align-center {
+  text-align: center;
+}
+.flex {
+  display: flex;
+}

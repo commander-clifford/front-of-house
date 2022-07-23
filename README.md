@@ -68,3 +68,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+### Resources
+New React Router Transitions:
+[https://stackblitz.com/edit/react-transition-group-gsap-test?file=src%2FRoutes.jsx,src%2FApp.js,src%2Findex.js]

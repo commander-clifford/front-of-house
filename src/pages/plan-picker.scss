@@ -1,0 +1,120 @@
+.plan-picker {
+.plan-compare-chart {
+  display: grid;
+  color: white;
+  
+
+  grid-template-rows: repeat(3, 1fr);
+  // grid-template-columns: repeat(3, 1fr);
+
+  .sub-grid-row {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr 1fr;
+    border-bottom: 1px solid var(--wmd-clr-grey-6);
+    &:last-of-type {
+      border: none;
+    }
+  }
+  
+  .item {
+    
+    position: relative;
+    transition: all 250ms ease-out;
+    padding: 1.4em;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    &.item--first { border-top: 1px solid transparent; }
+    &.item--last { border-bottom: 1px solid transparent; }
+    
+    &.hover {
+      background-color: var(--wmd-clr-black-t10);
+      border-left: 1px solid var(--wmd-clr-magenta);;
+      border-right: 1px solid var(--wmd-clr-magenta);;
+      &.item--first { border-top: 1px solid var(--wmd-clr-magenta);; }
+      &.item--last { border-bottom: 1px solid var(--wmd-clr-magenta);; }
+    }
+    &.active {
+      // color: var(--wmd-clr-magenta);
+      background-color: var(--wmd-clr-magenta-t40);
+      font-weight: bolder;
+    }
+    &--label {
+      display: flex;
+      align-items: center;
+    }
+    &--value {
+      text-align: right;
+      cursor: pointer;
+    }
+    &--2 {
+      grid-area: 1 / 3 / 2 / 2;
+    }
+    &--3 {
+      grid-area: 1 / 4 / 2 / 3;
+    }
+
+ 
+    
+    .monthly {
+      position: absolute;
+    }
+    .yearly, .monthly {
+      position: absolute;
+      // top: 50%;
+      right: 1.4em;
+      // transform: translate(0, calc(-50% + 1em) );
+    }
+    &.item--label .monthly,
+    &.item--label .yearly {
+      right: auto;
+      left: 1.4em;
+    }
+
+    
+
+  }
+
+
+
+}
+.recurance-icon {
+  position: absolute;
+  left: -3px;
+  opacity: 0.4;
+}
+.yearly-label {
+  // cursor: grab;
+}
+.yearly-cta {
+  cursor: grab;
+  font-weight: bolder;
+  margin-block: 2em;
+  background-color: var(--wmd-clr-magenta-1);
+  color: var(--wmd-clr-plum);
+
+  .MuiAlert-icon {
+    color: var(--wmd-clr-plum);
+    display: flex;
+    align-items: center;
+  }
+  .MuiAlert-message {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+  .MuiButton-root {
+    color: var(--wmd-clr-plum);
+    border-color: currentColor;
+    font-weight: bolder;
+  }
+  
+}
+
+
+.MuiButton-text {
+  color: white;
+}
+
+}
