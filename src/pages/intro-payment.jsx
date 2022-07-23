@@ -50,7 +50,7 @@ const IntroPayment = props => {
     const location = {
       pathname: '/'
     }
-    // history.push(location);
+    history.push(location);
     
     
   }
@@ -63,7 +63,7 @@ const IntroPayment = props => {
       <section className="card card--intro art__stagger-in art__stagger-out">
         <div className="card__content">
           <h1>Set up your payment method</h1>
-          <p>Your membership starts as soon as you set up payments.</p>
+          <p>Start watching as soon as your payment is set up.</p>
           <ul>
             <li>No commitments</li>
             <li>Cancel anytime</li>

@@ -50,7 +50,7 @@ const Hero = (props) => {
               <Container className="" maxWidth="">
                 <form action="" className="hero-sign-up-cta" onSubmit={signUpSubmit}>
                   <TextField className="email-input" name="email" label="E-Mail" variant="outlined" />
-                  <Button type="submit" className="email-submit" variant="contained" size="large">Start Watching</Button>
+                  <Button type="submit" className="email-submit" variant="contained" size="large">Start</Button>
                 </form>
               </Container>
               <p className="small">Plans start at $9.99/month</p>
