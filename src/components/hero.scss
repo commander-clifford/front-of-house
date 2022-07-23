@@ -15,10 +15,10 @@
   margin-inline: auto;
   border-radius: 0.25em;
   display: flex;
-  flex-direction: column;
-  @media only screen and (min-width: 576px){
-    flex-direction: row;  
-  }
+  flex-direction: row;
+  // @media only screen and (min-width: 576px){
+    // flex-direction: row;  
+  // }
   
 
 
