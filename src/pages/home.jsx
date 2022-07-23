@@ -14,10 +14,9 @@ const Home = (props) => {
 
     return (
       <article className="home">
+ 
 
         <Hero account={props.account}/>
-
-
 
 
       </article>
