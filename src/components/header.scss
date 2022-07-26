@@ -1,3 +1,9 @@
 div > header {
+  color: white;
   background-color: var(--wmd-clr-black-t80) !important;
+
+  a {
+    font-size: 1.4em;
+    color: currentColor;
+  }
 }
