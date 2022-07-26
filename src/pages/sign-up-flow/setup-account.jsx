@@ -28,10 +28,7 @@ const SetupAccount = props => {
 
   return (
     <article className="center create-account">
-
-      <section className="breadcrumb">
-        Step 1 of 3
-      </section>
+    
       <Breadcrumb step={1}/>
 
       <section className="card card-- art__stagger-in art__stagger-out">

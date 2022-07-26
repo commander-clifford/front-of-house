@@ -18,6 +18,7 @@ const IntroAccount = (props) => {
 
   return (
     <article className="center intro-account">
+    
       <Breadcrumb step={1}/>
       
       <section className="card card--intro art__stagger-in art__stagger-out">

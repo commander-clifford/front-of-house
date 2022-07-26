@@ -18,10 +18,7 @@ const IntroPlans = props => {
   return (
     <article className="center intro-account">
       
-      <section className="breadcrumb">
-        Step 2 of 3
-      </section>
-      <Breadcrumb step={1}/>
+      <Breadcrumb step={2}/>
 
       <section className="card card--intro art__stagger-in art__stagger-out">
         <div className="card__content">
