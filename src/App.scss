@@ -9,7 +9,21 @@ body {
   color: var(--foh-foreground-color);
 }
 
+h1 {
+  font-size: 1.8em;
+  margin-block: 1em;
+  margin-inline: auto;
+  max-width: 42ch;
+}
+h2 {
+  font-size: 1.6em;
+  margin-block: 0.5em;
+  margin-inline: auto;
+}
 p {
+  font-size: 1em;
+  margin-block: 1em;
+  margin-inline: auto;
   line-height: 1.6;
 }
 ul li {

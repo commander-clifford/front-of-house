@@ -1,31 +1,14 @@
 import React from "react";
 import "./hero.scss";
-import TextField from '@mui/material/TextField';
-import {Button, Container} from '@mui/material';
-import { useHistory, useParams } from "react-router-dom";
+import {Container} from '@mui/material';
 import DoubleReel from "./double-reel";
+import SignUp from "./sign-up";
 
 const Hero = (props) => {
 
-  const history = useHistory();
+ console.log("Hero Props",props);
 
-  const signUpSubmit = (e) => {
-
-    e.preventDefault();
-
-    console.log("Home Hero signUpSubmit email.value",e.target.email.value);
-
-    props.account.email = e.target.email.value ? e.target.email.value : "newUser123@email.com";
-
-    console.log("Home Hero signUpSubmit account",props.account);
-  
-    const location = {
-      pathname: '/intro-account'
-    }
-  
-    history.push(location);
-  
-  }
+ const { signUpSubmit } = props;
 
   return (
     <section id="page7818-band378014" className="band sc-pGacB gwxSTX max-section-hero-dbl-scroll-parent">
@@ -48,10 +31,7 @@ const Hero = (props) => {
             <div className="">
               <p>Let's get started! Enter your email to start your account.</p>
               <Container className="" maxWidth="">
-                <form action="" className="hero-sign-up-cta" onSubmit={signUpSubmit}>
-                  <TextField className="email-input" name="email" label="E-Mail" variant="outlined" />
-                  <Button type="submit" className="email-submit" variant="contained" size="large">Start</Button>
-                </form>
+                <SignUp signUpSubmit={signUpSubmit} expanded/>
               </Container>
               <p className="small">Plans start at $9.99/month</p>
             </div>

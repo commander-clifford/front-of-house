@@ -2,22 +2,23 @@ import React from 'react';
 import {Button} from '@mui/material';
 import { useHistory } from "react-router-dom";
 import TextField from '@mui/material/TextField';
+import {gsap, Power2} from "gsap";
 
+const SetupAccount = props => {
 
-const CreateAccount = props => {
-
+  const { account } = props;
   const history = useHistory();
 
-  console.log("CreateAccount account",props.account);
+  console.log("SetupAccount account",account);
 
   const goNext = (e) => {
     e.preventDefault();
 
-    props.account.email = e.target.email.value ? e.target.email.value : props.account.email;
-    props.account.password = e.target.password.value ? e.target.password.value : "securepassword123";
+    account.email = e.target.email.value ? e.target.email.value : account.email;
+    account.password = e.target.password.value ? e.target.password.value : "securepassword123";
 
     const location = {
-      pathname: '/intro-plans'
+      pathname: '/sign-up/intro-plans'
     }  
     history.push(location);
     
@@ -31,8 +32,6 @@ const CreateAccount = props => {
         Step 1 of 3
       </section>
 
-
-
       <section className="card card-- art__stagger-in art__stagger-out">
 
         <div className="card__content">
@@ -41,7 +40,7 @@ const CreateAccount = props => {
         </div>
 
         <form action="" className="card__actions" onSubmit={goNext}>
-          <TextField className="input" type="email" name="email" label="E-Mail" variant="outlined" value={props.account.email} />
+          <TextField className="input" type="email" name="email" label="E-Mail" variant="outlined" value={account.email} />
           <TextField className="input" type="password" name="password" label="Password" variant="outlined" />
           <TextField className="input" type="password" name="confirm-password" label="Confirm Password" variant="outlined" />
           <Button type="submit" className="" variant="contained" size="large">Next</Button>
@@ -53,4 +52,4 @@ const CreateAccount = props => {
 
 }
 
-export default CreateAccount;
+export default SetupAccount;

@@ -1,0 +1,19 @@
+.cta-band {
+  background: rgb(25, 7, 82);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1em;
+  padding-block: 2em;
+  margin-block: 2em;
+
+  svg {
+    width: auto; 
+    height: 0.8em; 
+    fill: currentColor; 
+    margin-left: 0.3em; 
+    margin-right: 0.1em; 
+    margin-bottom: -0.05em;
+  }
+}

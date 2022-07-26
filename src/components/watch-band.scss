@@ -1,0 +1,107 @@
+  /* ---------- Watch Bands ---------- */
+  
+    /* Side Ruled Headlines */
+    .watch-band-parent > .watch-band .watch-band__column--video .rich-text {
+      width: 100%;
+      overflow: hidden;
+      text-align: center;
+    }
+    .watch-band-parent > .watch-band .watch-band__column--video .rich-text .text-ruled span {
+      display: block;
+      margin-bottom: 1rem;
+    }
+    .watch-band-parent > .watch-band .watch-band__column--video .rich-text .text-ruled span p {
+      margin-inline: auto;
+      position: relative;
+      max-width: fit-content;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+    .watch-band-parent > .watch-band .watch-band__column--video .rich-text .text-ruled span p::before,
+    .watch-band-parent > .watch-band .watch-band__column--video .rich-text .text-ruled span p::after {
+      position: absolute;
+      top: calc(50% + 1px);
+      z-index: 0;
+      box-shadow: 0 0 16px 2px var(--wbd-clr-violet);
+      background: var(--wbd-clr-violet);
+      width: 200%;
+      height: 1px;
+      content: '';
+    }
+    .watch-band-parent > .watch-band .watch-band__column--video .rich-text .text-ruled span p::before {
+      right: calc(100% + 1em);
+    }
+    .watch-band-parent > .watch-band .watch-band__column--video .rich-text .text-ruled span p::after {
+      left: calc(100% + 1em);
+    }
+  
+    /* Content */
+  
+    .watch-band-parent > .watch-band .watch-band__column--content h4 {
+      font-style: italic;
+      text-transform: uppercase;
+    }
+    .watch-band-parent > .watch-band .watch-band__column--content p {
+      margin: 0 0 1rem;
+      font-weight: 100;
+      line-height: 1.2;
+    }
+  
+    /* Split for Long Titles */
+    .watch-band__column h4:nth-child(2) {
+      margin-top: 0.5rem;
+    }
+  
+    /* Video Players */
+    .watch-band-parent > .watch-band .player__container {
+      box-shadow:
+      -8px -8px 50px 10px rgba(58, 26, 255, 0.2),
+      8px 8px 50px 10px rgba(196, 6, 154, 0.2);
+    }
+    .watch-band-parent > .watch-band .tui-bar__active-progress {
+      background: var(--wbd-clr-violet) !important;
+    }
+  
+    @media screen and (min-width: 576px){} /* SM */
+    @media screen and (min-width: 768px){
+      // /* Purple Band
+      .watch-band-parent {
+        position: relative;
+      } /* MD */
+      .watch-band-parent::before {
+        position: absolute;
+        top: -1.5rem;
+        right: 0;
+        bottom: -1.5rem;
+        left: 0;
+        background-image: linear-gradient(292.89deg, rgba(45, 0, 100, 0.5) 5.09%, rgba(123, 42, 191, 0.5) 45.47%, rgba(154, 53, 239, 0.5) 79.89%, rgba(255, 0, 229, 0.5) 117.42%);
+        content: "";
+      }
+  
+      .watch-band-parent > .watch-band .watch-band__column--content .rich-text .text-center {
+        text-align: left !important;
+      }
+    .watch-band-parent > .watch-band .watch-band__column--content h3 {
+      margin: 0;
+    }
+      .watch-band-parent > .watch-band .watch-band__column--content h4 {
+        font-style: normal;
+        text-transform: unset;
+      }
+       .watch-band-parent > .watch-band .watch-band__column--content a.btn {
+        align-self: start;
+      }
+    }
+    @media screen and (min-width: 992px){
+      // /* LG
+    }
+    @media screen and (min-width: 1024px){
+       .watch-band-parent::before {
+        top: 1.5rem;
+        bottom: 1.5rem;
+      }
+     
+    } /* ~LG */
+    @media screen and (min-width: 1025px){} /* CMS-LG */
+    @media screen and (min-width: 1200px){} /* XL */
+    @media screen and (min-width: 1400px){} /* XXL */

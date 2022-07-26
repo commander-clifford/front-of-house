@@ -6,24 +6,24 @@ const IntroPlans = props => {
 
   const history = useHistory();
 
-  console.log("IntroPlans account",props.account);
-
   const goNext = (e) => {
     e.preventDefault();
     const location = {
-      pathname: '/plan-picker'
+      pathname: '/sign-up/setup-plan'
     }
     history.push(location);
   }
 
   return (
     <article className="center intro-account">
+      
       <section className="breadcrumb">
         Step 2 of 3
       </section>
+
       <section className="card card--intro art__stagger-in art__stagger-out">
         <div className="card__content">
-          <h1>Choose your plan</h1>
+          <h1>Awesome!<br/>Now choose your streaming plan</h1>
           <ul>
             <li>No commitments, cancel anytime</li>
             <li>All of HBO Max and Discovery+ for one low price</li>

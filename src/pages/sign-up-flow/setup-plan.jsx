@@ -1,19 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import {Button} from '@mui/material';
 import { useHistory } from "react-router-dom";
-import "./plan-picker.scss";
-import { display } from '@mui/system';
+import "./setup-plan.scss";
 import {gsap, Power2} from "gsap";
-import {Alert, AlertTitle} from '@mui/material';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+import {Alert} from '@mui/material';
 
-const PlanPicker = (props) => {
+const SetupPlan = (props) => {
+
+  const monthlyBasicPrice = "$9.99";
+  const monthlyPremiumPrice = "$14.99";
+  const yearlyBasicPrice = "$99.99";
+  const yearlyPremiumPrice = "$149.99";
+
+  const { account } = props;
 
   const history = useHistory();
 
   const [savingsCta, setSavingsCtaState] = useState("Save 16%!");
 
-  console.log("PlanPicker account",props.account);
+  console.log("SetupPlan account",account);
 
   
 
@@ -24,7 +29,7 @@ const PlanPicker = (props) => {
     e.preventDefault();
 
     const location = {
-      pathname: '/intro-payment'
+      pathname: '/sign-up/intro-payment'
     }
   
     history.push(location);
@@ -36,7 +41,7 @@ const PlanPicker = (props) => {
 
   const setRecurance = (recurance) => {
 
-    console.log("PlanPicker toggleRecurance recurance",recurance);
+    console.log("SetupPlan toggleRecurance recurance",recurance);
 
     const recruanceAnimation = gsap.timeline({
       defaults: { // children inherit these defaults
@@ -55,7 +60,7 @@ const PlanPicker = (props) => {
         y: 0,
         autoAlpha: 1
       },"-=80%");
-      props.account.recurance = "monthly";
+      account.recurance = "monthly";
       setSavingsCtaState("Save 16%");
     } else {
        // toggle to yearly
@@ -67,13 +72,13 @@ const PlanPicker = (props) => {
         y: 0,
         autoAlpha: 1
       },"-=80%");
-      props.account.recurance = "yearly"; // does this need to be in State
+      account.recurance = "yearly"; // does this need to be in State
       setSavingsCtaState("Pay Monthly");
     }
   }
   const toggleRecurance = () => {
 
-    // console.log("PlanPicker toggleRecurance recurance",recurance);
+    // console.log("SetupPlan toggleRecurance recurance",recurance);
 
     const recruanceAnimation = gsap.timeline({
       defaults: { // children inherit these defaults
@@ -82,7 +87,7 @@ const PlanPicker = (props) => {
       },
     });
 
-    if(props.account.recurance === "yearly"){
+    if(account.recurance === "yearly"){
       // toggle to monthly
       recruanceAnimation.to(yearlyCells,{
         y: -20,
@@ -92,7 +97,7 @@ const PlanPicker = (props) => {
         y: 0,
         autoAlpha: 1
       },"-=80%");
-      props.account.recurance = "monthly";
+      account.recurance = "monthly";
       setSavingsCtaState("Save 16%");
     } else {
        // toggle to yearly
@@ -104,10 +109,43 @@ const PlanPicker = (props) => {
         y: 0,
         autoAlpha: 1
       },"-=80%");
-      props.account.recurance = "yearly"; // does this need to be in State
+      account.recurance = "yearly"; // does this need to be in State
       setSavingsCtaState("Pay Monthly");
     }
 
+    getPrice(props.account.recurance, props.account.plan);
+
+  }
+  const getPrice = (recurance, plan) => {
+    console.log("SetupPlan getPrice",recurance, plan);
+    switch(plan) {
+      case "premium":
+        switch(recurance) {
+          case "yearly":
+            props.account.price = yearlyPremiumPrice;
+            break;
+          case "monthly":
+            props.account.price = monthlyPremiumPrice;
+            break;
+          default:
+        }
+        break;
+      
+      case "basic":
+        switch(recurance) {
+          case "yearly":
+            props.account.price = yearlyBasicPrice;
+            break;
+          case "monthly":
+            props.account.price = monthlyBasicPrice;
+            break;
+          default:
+        }
+        break;
+      default:
+        // code block
+    }
+    console.log("IntroPayment getPrice account",props.account);
   }
 
   useEffect(() => {
@@ -127,7 +165,7 @@ const PlanPicker = (props) => {
     // console.log("allCells",allCellsArray);
 
     const setPlan = (plan) => {
-      allCellsArray.map(
+      allCellsArray.forEach(
         cell => {
           cell.classList.remove("active");
           return
@@ -135,33 +173,37 @@ const PlanPicker = (props) => {
       );
 
       if(plan === "premium"){
-        props.account.plan = "premium";
-        premiumCellsArray.map(
+        account.plan = "premium";
+        premiumCellsArray.forEach(
           cell => {
             cell.classList.add("active");
             return
           }
         );
       } else {
-        props.account.plan = "basic";
-        basicCellsArray.map(
+        account.plan = "basic";
+        basicCellsArray.forEach(
           cell => {
             cell.classList.add("active");
           }
         );
       }
-      console.log("PlanPicker setPlan", props.account);
+      console.log("SetupPlan setPlan", account);
+      getPrice(props.account.recurance, props.account.plan);
     }
+
+
+    
 
     const setHoverOnPlan = (plan) => {
       if(plan === "premium"){
-        premiumCellsArray.map(
+        premiumCellsArray.forEach(
           cell => {
             cell.classList.add("hover");
           }
         );
       } else {
-        basicCellsArray.map(
+        basicCellsArray.forEach(
           cell => {
             cell.classList.add("hover");
           }
@@ -170,7 +212,7 @@ const PlanPicker = (props) => {
     }
 
     const setHoverOffPlans = () => {
-      allCellsArray.map(
+      allCellsArray.forEach(
         cell => {
           cell.classList.remove("hover");
         }
@@ -178,25 +220,25 @@ const PlanPicker = (props) => {
     }
 
     // Activate interactive plan pickers cells
-    premiumCellsArray.map(
+    premiumCellsArray.forEach(
       cell => {
-        cell.addEventListener("click", () => {setPlan("premium")});
+        cell.addEventListener("mouseup", () => {setPlan("premium")});
         cell.addEventListener("mouseover", () => {setHoverOnPlan("premium")});
         cell.addEventListener("mouseout", () => {setHoverOffPlans()});
       }
     );
 
-    basicCellsArray.map(
+    basicCellsArray.forEach(
       cell => {
-        cell.addEventListener("click", () => {setPlan("basic")});
+        cell.addEventListener("mouseup", () => {setPlan("basic")});
         cell.addEventListener("mouseover", () => {setHoverOnPlan("basic")});
         cell.addEventListener("mouseout", () => {setHoverOffPlans()});
       }
     );
     
-    const newRecurance = props.account.recurance ? props.account.recurance : "monthly"; 
+    const newRecurance = account.recurance ? account.recurance : "monthly"; 
     // const newRecurance = "monthly"; 
-    const newPlan = props.account.plan ? props.account.plan : "premium"; 
+    const newPlan = account.plan ? account.plan : "premium"; 
 
     setRecurance(newRecurance);
 
@@ -207,7 +249,9 @@ const PlanPicker = (props) => {
       autoAlpha: 0
     });
 
-
+    // https://stackoverflow.com/questions/55840294/how-to-fix-missing-dependency-warning-when-using-useeffect-react-hook
+    // eslint-disable-next-line
+    
   }, []);
 
   return (
@@ -286,11 +330,11 @@ const PlanPicker = (props) => {
         </p>
       </section>
       {/* <section className="card card--intro art__stagger-in art__stagger-out">
-        Welcome {props.account.email} Sign Up
+        Welcome {account.email} Sign Up
       </section> */}
     </article>
   );
 
 }
 
-export default PlanPicker;
+export default SetupPlan;
