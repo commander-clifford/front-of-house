@@ -3,6 +3,7 @@ import {Button} from '@mui/material';
 import { useHistory } from "react-router-dom";
 import TextField from '@mui/material/TextField';
 import {gsap, Power2} from "gsap";
+import Breadcrumb from "../../components/breadcrumb";
 
 const SetupPayment = props => {
 
@@ -31,6 +32,7 @@ const SetupPayment = props => {
       <section className="breadcrumb">
         Step 3 of 3
       </section>
+      <Breadcrumb step={1}/>
 
       <section className="card card-- art__stagger-in art__stagger-out">
         SetupPayment

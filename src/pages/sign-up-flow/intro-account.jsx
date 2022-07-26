@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {Button} from '@mui/material';
 import { useHistory } from "react-router-dom";
+import Breadcrumb from "../../components/breadcrumb";
 
-const IntroAccount = props => {
+const IntroAccount = (props) => {
 
   const history = useHistory();
+  const { account } = props;
 
   const goNext = (e) => {
     e.preventDefault();
@@ -16,9 +18,8 @@ const IntroAccount = props => {
 
   return (
     <article className="center intro-account">
-      <section className="breadcrumb">
-        Step 1 of 3
-      </section>
+      <Breadcrumb step={1}/>
+      
       <section className="card card--intro art__stagger-in art__stagger-out">
         <div className="card__content">
           <h1>Great!<br/>Let's create your account</h1>

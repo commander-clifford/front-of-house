@@ -1,6 +1,7 @@
 import React from 'react';
 import {Button} from '@mui/material';
 import { useHistory } from "react-router-dom";
+import Breadcrumb from "../../components/breadcrumb";
 
 const IntroPlans = props => {
 
@@ -20,6 +21,7 @@ const IntroPlans = props => {
       <section className="breadcrumb">
         Step 2 of 3
       </section>
+      <Breadcrumb step={1}/>
 
       <section className="card card--intro art__stagger-in art__stagger-out">
         <div className="card__content">
