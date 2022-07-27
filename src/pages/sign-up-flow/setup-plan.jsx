@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import "./setup-plan.scss";
 import {gsap, Power2} from "gsap";
 import {Alert} from '@mui/material';
+import Breadcrumb from "../../components/breadcrumb";
 
 const SetupPlan = (props) => {
 
@@ -256,9 +257,9 @@ const SetupPlan = (props) => {
 
   return (
     <article className="center plan-picker">
-      <section className="breadcrumb">
-        Step 2 of 3
-      </section>
+    
+      <Breadcrumb step={2}/> 
+      
       <section className="card card--wide art__stagger-in art__stagger-out">
         <div className="card__content">
           <h1>Choose the plan that's right for you</h1>

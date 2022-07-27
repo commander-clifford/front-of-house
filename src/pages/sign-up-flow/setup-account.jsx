@@ -3,6 +3,7 @@ import {Button} from '@mui/material';
 import { useHistory } from "react-router-dom";
 import TextField from '@mui/material/TextField';
 import {gsap, Power2} from "gsap";
+import Breadcrumb from "../../components/breadcrumb";
 
 const SetupAccount = props => {
 
@@ -27,10 +28,8 @@ const SetupAccount = props => {
 
   return (
     <article className="center create-account">
-
-      <section className="breadcrumb">
-        Step 1 of 3
-      </section>
+    
+      <Breadcrumb step={1}/>
 
       <section className="card card-- art__stagger-in art__stagger-out">
 

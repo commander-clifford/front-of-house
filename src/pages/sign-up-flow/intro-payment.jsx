@@ -1,6 +1,7 @@
 import React from 'react';
 import {Button} from '@mui/material';
 import { useHistory } from "react-router-dom";
+import Breadcrumb from "../../components/breadcrumb";
 
 const IntroPayment = props => {
 
@@ -22,9 +23,9 @@ const IntroPayment = props => {
 
   return (
     <article className="center intro-account">
-      <section className="breadcrumb">
-        Step 3 of 3
-      </section>
+      
+      <Breadcrumb step={3}/>
+      
       <section className="card card--intro art__stagger-in art__stagger-out">
         <div className="card__content">
           <h1>Set up your payment method</h1>
