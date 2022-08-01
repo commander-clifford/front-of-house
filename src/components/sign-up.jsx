@@ -24,7 +24,7 @@ const SignUp = props => {
     <>
       <form action="" className={`hero-sign-up-cta ${expanded ? 'expanded' : ''}`} onSubmit={signUpSubmit}>
         {emailInput()}
-        <Button type="submit" className="email-submit" variant="contained" size="large">Get Started</Button>
+        <Button type="submit" className="email-submit" variant="contained" size="large">Get&nbsp;Started</Button>
       </form>
     </>
   );
